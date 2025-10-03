@@ -96,7 +96,7 @@ After loader completes, main UI becomes visible.
 <table>
   <tr>
     <th> Index Page</th>
-    <th> Sign In Page 2</th>
+    <th> Sign In Page</th>
     <th> Sign Up Page</th>
   </tr>
   <tr>
@@ -148,7 +148,7 @@ After loader completes, main UI becomes visible.
 <table>
   <tr>
     <th> Fitness Center Page</th>
-    <th> Part Hall page</th>
+    <th> Part Hall Page</th>
     <th> Head-Cook dashboard Page</th>
   </tr>
   <tr>
@@ -161,7 +161,7 @@ After loader completes, main UI becomes visible.
 <table>
   <tr>
     <th> Catering Orders Page</th>
-    <th> Supervisor Dashboard age</th>
+    <th> Supervisor Dashboard Page</th>
     <th> Stationery Orders Page</th>
   </tr>
   <tr>
