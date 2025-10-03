@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voyager Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+/* Inputs and Datalist */
+input[list] {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Input focus */
+input[list]:focus {
+    border-color: #0366d6;
+    box-shadow: 0 0 5px rgba(3, 102, 214, 0.3);
+}
+
+/* Datalist arrow icon */
+input[list] {
+    background: white url('data:image/svg+xml;utf8,<svg fill="%23366" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-size: 16px;
+    padding-right: 35px;
+    color: #333;
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+        <img src="images/logo.png" alt="Cruise Logo">
+    </div>
+
+    <!-- Navigation buttons at left side -->
+    <div class="nav-links">
+        <a href="#" onclick="showCatering()"> Catering</a>
+        <a href="#" onclick="showStationery()"> Stationery</a>
+        <a href="#" onclick="showBooking()"> Booking</a>
+        <a href="index.html">Logout</a>
+    </div>
+</div>
+
+<!-- Dashboard Content -->
+<div id="content">
+    <h1>Welcome Voyager!</h1>
+    <p>Select an option from the navigation above to get started.</p>
+</div>
+
+<script type="module" src="js/voyager.js"></script>
+</body>
+</html>

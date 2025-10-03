@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voyager Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="Voyager Logo">
+     
+    </div>
+    <div class="nav-links">
+        <a href="#" onclick="viewBookings('resort')">Resort</a>
+        <a href="#" onclick="viewBookings('movie')">Movie</a>
+        <a href="#" onclick="viewBookings('beauty')">Beauty Salon</a>
+        <a href="#" onclick="viewBookings('fitness')">Fitness Center</a>
+        <a href="#" onclick="viewBookings('party')">Party Hall</a>
+        <a href="index.html">Logout</a>
+    </div>
+    
+</div>
+
+<!-- Content Area -->
+<div id="managerContent">
+    <h1>Admin Dashboard</h1>
+    <p>Select an option from the navigation above to get started.</p>
+</div>
+
+<script type="module" src="js/manager.js"></script>
+</body>
+</html>
