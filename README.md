@@ -170,6 +170,8 @@ After loader completes, main UI becomes visible.
     <td><img src="public/images/c18.png" width="370"/> </td>
   </tr>
 </table>
+
+
 ------------
 
 ### License
