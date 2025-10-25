@@ -88,93 +88,270 @@ body {
 }
 
 /* ===== General Reset ===== */
+body { 
+  font-family: Arial, sans-serif; 
+  background: #f0f4f8; 
+  color: #333; 
+  margin:0; 
+  padding:0;
+}
+h1,h2,h3 { text-align:center; }
+nav { text-align:center; margin:20px;}
+button { margin:5px; padding:10px 15px; border:none; border-radius:5px; background:#002147; color:white; cursor:pointer;}
+input, select, input[list] { display:block; margin:10px auto; padding:10px; border-radius:5px; width:80%;}
+#content, #adminContent, #managerContent, #chefContent, #supervisorContent { 
+  max-width:1400px; 
+  margin:20px auto; 
+  background:white; 
+  padding:20px; 
+  border-radius:10px; 
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ===== Message Cards ===== */
+.message-card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  display: none; /* hidden by default */
+  font-weight: bold;
+  color: white;
+}
+.message-success { background-color: #28a745; }
+.message-error { background-color: #dc3545; }
+
+/* ===== Toasts ===== */
+.toast {
+  min-width: 200px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #1a0643;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: relative;
+}
+.toast.show {
+  opacity: 0.9;
+  transform: translateX(0);
+}
+.toast.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+/* ===== Background ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #acc9f8, #acc9f8);
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #002147;
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+.navbar .logo img {
+  height: 80px;
+  margin-right: 10px;
+}
+.navbar .nav-links {
+  display: flex;
+  gap: 40px; 
+}
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.navbar .nav-links a:hover {
+  color: #97b0d8;
+}
+
+/* ===== General Reset ===== */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Inter, Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, Arial, sans-serif;
 }
 
 /* ===== Heading ===== */
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #002147;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #002147;
 }
 
 /* ===== Navigation Buttons ===== */
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
-
 nav button {
-    background-color: #0366d6;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: 0.3s;
+  background-color: #0366d6;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
 }
-
 nav button:hover {
-    background-color: #024ea2;
+  background-color: #024ea2;
 }
 
 /* ===== Manager Content Area ===== */
-/* Content card */
 #managerContent {
-    max-width: 700px;
-    margin: 30px auto;
-    background: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-width: 700px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-
-/* Inputs & selects */
 input, select {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    border-radius: 6px;
-    width: 90%;
-    border: 1px solid #ccc;
-    font-size: 1em;
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 6px;
+  width: 90%;
+  border: 1px solid #ccc;
+  font-size: 1em;
 }
 
+/* ===== Loader Overlay ===== */
 #loaderOverlay {
-    position: fixed;
-    top:0; left:0;
-    width:100%; height:100%;
-    background: linear-gradient(to bottom, #001848, #004d99);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow: hidden;
-    z-index:9999;
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: linear-gradient(to bottom, #001848, #004d99);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow: hidden;
+  z-index:9999;
 }
-
 .loader-logo {
-    width:50vw;
-    max-width:500px;
-    height:auto;
-    border: 5px solid silver; /* Square border */
-    box-shadow: 0 0 30px silver;
-    z-index: 10;
-    position: absolute;
-    transition: all 2s ease-in-out;
+  width:50vw;
+  max-width:500px;
+  height:auto;
+  border: 5px solid silver;
+  box-shadow: 0 0 30px silver;
+  z-index: 10;
+  position: absolute;
+  transition: all 2s ease-in-out;
+}
+#shipCanvas {
+  position:absolute;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  z-index:5;
 }
 
-#shipCanvas {
-    position:absolute;
-    top:0; left:0;
-    width:100%;
-    height:100%;
-    z-index:5;
+/* ===========================
+   ✅ Responsive Design
+=========================== */
+@media (max-width: 1024px) {
+  .navbar .nav-links {
+    gap: 25px;
+  }
+  .navbar .logo img {
+    height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .navbar .logo img {
+    height: 60px;
+    margin-bottom: 8px;
+  }
+
+  .navbar .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  input, select {
+    width: 95%;
+  }
+
+  #managerContent, #adminContent, #content {
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  button {
+    width: auto;
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .logo img {
+    height: 50px;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    width: 90%;
+  }
+
+  input, select {
+    width: 100%;
+    font-size: 0.9em;
+  }
+
+  #managerContent, #adminContent, #content {
+    width: 90%;
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 1.3em;
+  }
 }
